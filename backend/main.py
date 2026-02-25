@@ -2,8 +2,13 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 import uvicorn
+import os
 
 from api import auth, space, file
+
+# 确保静态文件目录存在
+os.makedirs("static", exist_ok=True)
+os.makedirs("static/uploads", exist_ok=True)
 
 app = FastAPI(
     title="FamilyAlbum API",
