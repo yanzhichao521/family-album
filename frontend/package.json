@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && node node_modules/vite/bin/vite.js build",
+    "build": "npm install && tsc && node node_modules/vite/bin/vite.js build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "node node_modules/vite/bin/vite.js preview"
   },
